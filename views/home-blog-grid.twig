@@ -1,0 +1,19 @@
+<div class="cf f6 lh-copy w-100 mb4">
+	{% for post in posts %}
+	<article class="center bg-white w-100-l mv4 mw8">
+		<div class="post-img fn fl-l w-100 w-50-l" data-aos="fade-right">
+			<img src="{{ post.thumbnail.src }}" class="w-100 db" alt="Lastest Blog Image">
+		</div>
+		<div class="post-content fn fl-l w-100 w-50-l pv5" data-aos="fade-left">
+			<div class="pv2 ph3">
+				<h1 class="f6 ttu tracked" style="font-size:1.5em;">{{ post.post_title }}</h1>
+			</div>
+			<div class="pa3">
+				<!-- p class="lh-title">{{ post.post_excerpt }}</p -->
+				<!-- small class="gray db pv2">{{post.author.name}} - <time>{{ post.post_date }}</time></small -->
+				<a href="{{ post.slug }}" style="text-decoration:underline;" class="link dim lh-title">See Full Article</a>
+			</div>
+		</div>
+	</article>
+	{% endfor %}
+</div>

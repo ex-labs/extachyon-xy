@@ -1,0 +1,15 @@
+{% if services %}
+	<div class="container cf f6 lh-copy w-100 mb6 mw8 center">
+		{% for service in services %}
+			{% if service.featured_service == 0 %}
+			
+				<div class="service-item pv5 w-100 ph5 ph0-l " data-aos="fade-up">
+					<h2 class="f1-ns f3 fw6">{{ service.post_title }}</h2>
+					<div class="ph5">{{ service.post_content|raw }}</div>
+				</div>
+			
+			{% endif %}
+		
+		{% endfor %}
+	</div>
+{% endif %}

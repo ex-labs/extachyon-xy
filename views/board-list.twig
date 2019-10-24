@@ -1,0 +1,21 @@
+{% if board %}
+
+	{% for member in board %}
+
+		<div class="member-item w-100 pv5">
+			<div class="member-item-inner mw8 center cf">
+				<div class="featimg fl w-100 w-50-l">
+					<div class="featimg-bg" style="background-image:url('{{ member.thumbnail.src }}');" data-aos="fade-right"></div>
+				</div>
+				<div class="text fl w-100 w-50-l">
+					<h2 class="f2 fw7">{{ member.post_title }}</h2>
+					<div>{{ member.post_content }}</div>
+				</div>
+			</div>
+		</div>
+
+	{% endfor %}
+
+
+
+{% endif %}

@@ -1,0 +1,28 @@
+body {
+    background: #cecece;
+}
+
+.login h1 a {
+  background-image: url('http://xyitystaging.wpengine.com/wp-content/uploads/2018/11/Xyity_logo_trans.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100px;
+  width: 200px;
+  background-size: contain;
+  pointer-events: none;
+}
+
+.login #login_error, .login .message {
+    border-left: 4px solid #ed1d43;
+}
+
+.button {
+	box-shadow: none!important;
+	padding: 0 42px 2px!important;
+}
+
+.button-primary {
+    background: #282780!important;
+    text-shadow: none!important;
+    border:none!important;
+}

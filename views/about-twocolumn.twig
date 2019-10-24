@@ -1,0 +1,9 @@
+{% if contents %}
+	<div class="f6 lh-copy fl w-100 mb4">
+		<div class="fl-ns w-100 w-50-l pr3-m pv5 bg-black-10" style="background: url('{{ contents.thumbnail.src }}');height:431px;" data-aos="fade-right"></div>
+		<div class="fl-ns w-50-m w-50-l pr3-m pv5 ph5 bg-black-05" style="min-height:431px; max-height: 431px;" data-aos="fade-left">
+			<h3 class="f2 fw6">{{ contents.post_title }}</h3>
+	    	<div class="fw5">{{ contents.post_content|raw }}</div> 
+		</div>
+	</div>
+{% endif %}

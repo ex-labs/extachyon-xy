@@ -1,0 +1,331 @@
+/*0
+ Theme Name:   EX Tachyon - Xyity.com
+ Description:  A child built by JNR / EX Labs
+ Author:	   EX Labs
+ Author URI:   http://exlabs.us
+ Template:     twentyseventeen
+ Version:      1.0.0
+*/
+
+
+@import url("../twentyseventeen/style.css");
+@import url("https://unpkg.com/tachyons/css/tachyons.min.css");
+@import url("css/aos.css");
+@import url("css/font-awesome.min.css");
+
+/*
+@import url("../exlabs-showcase/css/bootstrap.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css");
+@import url("../exlabs-showcase/css/font-awesome.min.css");
+@import url("../exlabs-showcase/css/slick-theme.css");
+@import url("../exlabs-showcase/css/slick.css");
+@import url("../exlabs-showcase/css/main.css");
+*/
+
+/*** Overrides ***/
+
+#top-menu {
+    list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    padding: unset;
+}
+
+a {
+  color:unset;
+}
+
+article {
+  border:none!important;
+}
+
+.wrap {
+    padding-top: 20px;
+}
+
+/*** Global CSS ***/
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,700i,800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,800&display=swap');
+
+body {
+   font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+   font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+/** Standard Header Styles **/ 
+
+.page-subline {
+    padding-top: 0px;
+}
+
+
+/** Hero Video **/
+
+.vimeo-wrapper {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   z-index: -1;
+   pointer-events: none;
+   overflow: hidden;
+}
+.vimeo-wrapper iframe {
+   width: 100vw;
+   height: 56.25vw; /* Given a 16:9 aspect ratio, 9/16*100 = 56.25 */
+   min-height: 100vh;
+   min-width: 177.77vh; /* Given a 16:9 aspect ratio, 16/9*100 = 177.77 */
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+/** Tachonys Addon / Overrides **/
+
+nav {
+  position: absolute;
+}
+
+.fixed {
+  z-index: 10;
+}
+
+.navfixed {
+    width: 100%;;
+    top:0px;
+    transition: all 0.9s ease-out 0s;
+}
+
+.mobile-nav {
+  display: none;
+  color: #fff;
+  font-size: 2em;
+}
+
+.close-mobile-nav {
+    display:none;
+  }
+
+.noscroll {
+    overflow: hidden;
+    position: fixed;
+}
+
+/**************************\
+  Basic Modal Styles
+\**************************/
+
+.modal {
+  font-family: -apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica neue,helvetica,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
+}
+
+.modal__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal__container {
+  background-color: #fff;
+  padding: 30px;
+  max-width: 500px;
+  max-height: 100vh;
+  border-radius: 4px;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.modal__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal__title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.25;
+  color: #00449e;
+  box-sizing: border-box;
+}
+
+.modal__close {
+  background: transparent;
+  border: 0;
+}
+
+.modal__header .modal__close:before { content: "\2715"; }
+
+.modal__content {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+  color: rgba(0,0,0,.8);
+}
+
+.modal__btn {
+  font-size: .875rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  background-color: #e6e6e6;
+  color: rgba(0,0,0,.8);
+  border-radius: .25rem;
+  border-style: none;
+  border-width: 0;
+  cursor: pointer;
+  -webkit-appearance: button;
+  text-transform: none;
+  overflow: visible;
+  line-height: 1.15;
+  margin: 0;
+  will-change: transform;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  transition: -webkit-transform .25s ease-out;
+  transition: transform .25s ease-out;
+  transition: transform .25s ease-out,-webkit-transform .25s ease-out;
+}
+
+.modal__btn:focus, .modal__btn:hover {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+.modal__btn-primary {
+  background-color: #00449e;
+  color: #fff;
+}
+
+
+
+/**************************\
+  Demo Animation Style
+\**************************/
+@keyframes mmfadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+
+@keyframes mmfadeOut {
+    from { opacity: 1; }
+      to { opacity: 0; }
+}
+
+@keyframes mmslideIn {
+  from { transform: translateY(15%); }
+    to { transform: translateY(0); }
+}
+
+@keyframes mmslideOut {
+    from { transform: translateY(0); }
+    to { transform: translateY(-10%); }
+}
+
+.micromodal-slide {
+  display: none;
+}
+
+.micromodal-slide.is-open {
+  display: block;
+}
+
+.micromodal-slide[aria-hidden="false"] .modal__overlay {
+  animation: mmfadeIn .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden="false"] .modal__container {
+  animation: mmslideIn .3s cubic-bezier(0, 0, .2, 1);
+}
+
+.micromodal-slide[aria-hidden="true"] .modal__overlay {
+  animation: mmfadeOut .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden="true"] .modal__container {
+  animation: mmslideOut .3s cubic-bezier(0, 0, .2, 1);
+}
+
+.micromodal-slide .modal__container,
+.micromodal-slide .modal__overlay {
+  will-change: transform;
+}
+
+/** Media Queries **/
+
+@media ( max-width: 700px ) {
+
+  .mobile-noshow {
+    display:none;
+  }
+  
+  .mobile-nav {
+    display: block
+  }
+
+  .menu-updated-menu-container {
+    visibility: hidden;
+  }
+
+  .mobile-nav-bg {
+    /*display: none;*/
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    background: #040933f2;
+    padding: 50px 0;
+    text-align: center;
+    z-index: 20;
+    transition: 0.7s;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .mobile-nav-open {
+    /*display: block;*/
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .close-mobile-nav {
+    display:block;
+  }
+
+  video {
+      width: 100vw;
+      height: 59.25vw;
+      min-height: 100vh;
+      min-width: 177.77vh;
+      position: fixed;
+      top: 5%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      /*display: none;*/
+  }
+
+}

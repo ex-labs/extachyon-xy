@@ -1,0 +1,10 @@
+{% if benefits %}
+	<div class="container cf f6 ph5 lh-copy w-100 mb5">
+		{% for benefit in benefits %}
+			<div class="benefit-item pv3 fl w-100 w-50-l ph5 h5" data-aos="fade-up">
+				<h4 class="f3-ns f4 fw6">{{ benefit.post_title }}</h4>
+				<div>{{ benefit.post_content|raw }}</div>
+			</div>
+		{% endfor %}
+	</div>
+{% endif %}

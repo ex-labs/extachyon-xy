@@ -1,0 +1,19 @@
+{% if programs %}
+<div class="f6 lh-copy w-100 mb4"><!-- containter -->
+	{% for program in programs %}
+		{% if loop.length == 4 %}
+			<div class="fn fl-m fl-l w-100 w-50-l pr3-m pv5 {{ loop.first or loop.last ? 'bg-black-10' : 'bg-black-05' }} tc" {{ loop.first or loop.last ? 'data-aos="fade-right"' : 'data-aos="fade-left"' }}>
+	 			<p class="fw7">
+	   				{{ program.post_title }}
+	 			</p> 
+			</div>
+		{% else %}
+			<div class="fn fl-m fl-l w-100 w-33-l pr3-m pv5 {{ loop.first or loop.last ? 'bg-black-10' : 'bg-black-05' }} tc" {{ loop.first or loop.last ? 'data-aos="fade-right"' : 'data-aos="fade-left"' }}>
+	 			<p class="fw7">
+	   				{{ program.post_title }}
+	 			</p> 
+			</div>
+		{% endif %}
+	{% endfor %}
+</div>
+{% endif %}

@@ -1,0 +1,9 @@
+{% if contents %}
+	{% for item in contents %}
+		{% if item.post_content != "" %}
+			<div class="w-80 pv5 center the_content">
+				{{ item.post_content|raw }}
+			</div>
+		{% endif %}
+	{% endfor %}
+{% endif %}

@@ -1,0 +1,15 @@
+{% if featservices %}
+<div class="f6 lh-copy w-100 pv5 mw8 center">
+	{% for featservice in featservices %}
+		{% if featservice.featured_service == 1 %}
+				<div class="item w-100 white">
+					<div class="item-inner">
+						<div class="item-title"><h2 class="f1-ns f3 fw6 white">{{ featservice.post_title }}</h4></div>
+						<div class="item-content ph5">{{ featservice.post_content }}</div>
+					</div>
+
+				</div>
+		{% endif %}
+	{% endfor %}
+</div>
+{% endif %}
