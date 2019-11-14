@@ -3,6 +3,7 @@
 Purpose built wordpress theme & functions
 
 ### Theme Specific Plugins
-ACF
-Timber
++ ACF
++ Timber
++ Lab Services
 
